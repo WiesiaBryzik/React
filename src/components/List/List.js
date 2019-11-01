@@ -17,7 +17,7 @@ class List extends React.Component {
     title: PropTypes.node.isRequired,
     description: PropTypes.node,
     columns: PropTypes.array,
-    // image: PropTypes.string,
+    image: PropTypes.string,
   }
   
   static defaultProps = {
@@ -43,11 +43,10 @@ class List extends React.Component {
   render() {
     return (
       <section className={styles.component}>
-        <Hero titleText={this.props.title} />
+        <Hero titleText={this.props.title} imageText={this.props.image}/>
         <div className={styles.description}>
           {ReactHtmlParser(this.props.description)} 
         </div>
-        {/* <Hero imageText={this.props.image} /> */}
         
         <div className={styles.columns}>
           {this.state.columns.map(({key, ...columnProps}) => (

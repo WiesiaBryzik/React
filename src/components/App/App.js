@@ -17,15 +17,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
-
-
-{/* <main className={styles.component}> */}
-//   <h1 className={styles.title}>My first React app</h1>
-//   <h2 className={styles.subtitle}>Hello world! </h2>
-//   <List title={['Thingssss to do ', <sup key='1'>soon!</sup>]}>
-//     <p>I'm plannnnnnnnnning on doing all these things sooner, rather than later!</p>
-//   </List>
-//   {/* <List image='https://images.pexels.com/photos/1624496/pexels-photo-1624496.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940' /> */}
-// </main>
