@@ -5,7 +5,7 @@ import ReactHtmlParser from 'react-html-parser';
 import styles from './List.scss';
 import Hero from '../Hero/Hero';
 import Column from '../Column/Column';
-import Creator from '../Creator/Creator'
+import Creator from '../Creator/Creator';
 
 
 class List extends React.Component {
