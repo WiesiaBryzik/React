@@ -1,25 +1,32 @@
 import React from 'react';
 import styles from './Column.scss';
 import Card from '../Card/Card';
-import {settings} from '../../data/dataStore';
+import { settings } from '../../data/dataStore';
 import Creator from '../Creator/Creator';
 import Icon from '../Icon/Icon';
+import PropTypes from 'prop-types';
 
 class Column extends React.Component {
   state = {
     cards: this.props.cards || [],
   }
 
-  addCard(title){
+  static propTypes = {
+    cards: PropTypes.node.isRequired,
+    icon: PropTypes.node,
+    title: PropTypes.string.isRequired,
+  }
+
+  addCard(title) {
     this.setState(state => (
       {
         cards: [
           ...state.cards,
           {
-            key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
+            key: state.cards.length ? state.cards[state.cards.length - 1].key + 1 : 0,
             title,
-          }
-        ]
+          },
+        ],
       }
     ));
   }
@@ -27,20 +34,20 @@ class Column extends React.Component {
   render() {
     return (
       <section className={styles.component}>
-          <h3 className={styles.title}><span className={styles.icon}><Icon name={this.props.icon} /></span>{this.props.title}</h3>
+        <h3 className={styles.title}><span className={styles.icon}><Icon name={this.props.icon} /></span>{this.props.title}</h3>
 
-          <div className={styles.columns}>
-            {this.state.cards.map(({key, ...cardProps}) => (
-              <Card key={key} {...cardProps} />
-            ))}
-          </div>
+        <div className={styles.columns}>
+          {this.state.cards.map(({ key, ...cardProps }) => (
+            <Card key={key} {...cardProps} />
+          ))}
+        </div>
 
-          <div className={styles.creator}>
-            <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
-          </div>
-          
+        <div className={styles.creator}>
+          <Creator text={settings.cardCreatorText} action={title => this.addCard(title)} />
+        </div>
+
       </section>
-    )
+    );
   }
 }
 
