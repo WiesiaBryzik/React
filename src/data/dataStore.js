@@ -1,4 +1,5 @@
 export const settings = {
+  iconName: 'dog',
   columnCreatorText: 'Add new column',
   cardCreatorText: 'Add new card',
   creator: {
@@ -12,6 +13,18 @@ export const settings = {
   },
   defaultListDescription: '<p>I can do all the things!!!</p>',
   defaultColumnIcon: 'list-alt',
+};
+
+export const infoData = {
+  title: 'tytułem',
+  image: 'https://images.pexels.com/photos/374898/pexels-photo-374898.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+  text: 'To jest tekst o psie w kocu',
+};
+
+export const faqData = {
+  title: 'Gęgęgęgę',
+  image: 'https://images.pexels.com/photos/414155/pexels-photo-414155.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+  text: 'To jest tekst o załamanej gęsi',
 };
 
 export const pageContents = {
